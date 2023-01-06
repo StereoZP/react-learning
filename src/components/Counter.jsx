@@ -1,4 +1,8 @@
 import React, {useState} from 'react';
+import MyInput from "./UI/input/MyInput";
+
+
+
 
 const Counter = () => {
     const [count, setCount] = useState(0)

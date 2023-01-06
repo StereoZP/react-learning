@@ -3,6 +3,7 @@ import './styles/App.css';
 import PostList from "./components/PostList";
 import PostForm from "./components/PostForm";
 import MySelect from "./components/UI/select/MySelect";
+import Counter from "./components/Counter";
 
 function App() {
   const[posts, setPosts] = useState([
@@ -22,7 +23,8 @@ function App() {
 
   const sortPosts = (sort) => {
       setSelectedSort(sort);
-      console.log(sort);
+      console.log(sort)
+      setPosts([...posts].sort((a, b) => a[sort].localeCompare(b[sort])))
 
   }
 
@@ -50,7 +52,7 @@ function App() {
           </h1>
       }
         <div>
-            <button>New post</button>
+            <Counter/>
         </div>
     </div>
 
