@@ -21,3 +21,13 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.counterContainer{
+    margin-top: 20px;
+    border: 2px solid teal;
+    text-align: center;
+    justify-content: center;
+}
+.inputCounter{
+    padding: 5px;
+}

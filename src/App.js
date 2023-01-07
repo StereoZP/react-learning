@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, { useState} from "react";
 import './styles/App.css';
 import PostList from "./components/PostList";
 import PostForm from "./components/PostForm";
@@ -51,7 +51,7 @@ function App() {
             Posts not find
           </h1>
       }
-        <div>
+        <div className="counterContainer">
             <Counter/>
         </div>
     </div>
