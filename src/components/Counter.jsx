@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import CounterControl from './CounterControl';
-import MyButton from "./UI/button/MyButton";
-//import classes from './UI/button/MyButton.module.css';
+import classes from "./Counter.module.css"
 
 const Counter = () => {
     const [count, setCount] = useState(0)
@@ -21,16 +20,15 @@ const Counter = () => {
         setCount(count-1)
     }
     return (
-        <div>
+        <div className={classes.myCounter}>
             <h1>{count}</h1>
             <CounterControl userControl={{
                 value:value,
                 setValue:setValue,
                 onClick:userCount,
                 text:"Ввод числа"}}/>
-            <MyButton onClick={increment}>Добавить</MyButton>
-            <MyButton onClick={decrement}>Отнять</MyButton>
-
+            <button className={classes.myCounterBtn} onClick={increment}>Добавить</button>
+            <button className={classes.myCounterBtn} onClick={decrement}>Отнять</button>
         </div>
 
     );

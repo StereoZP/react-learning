@@ -23,7 +23,6 @@ function App() {
 
   const sortPosts = (sort) => {
       setSelectedSort(sort);
-      console.log(sort)
       setPosts([...posts].sort((a, b) => a[sort].localeCompare(b[sort])))
 
   }
@@ -51,9 +50,7 @@ function App() {
             Posts not find
           </h1>
       }
-        <div className="counterContainer">
             <Counter/>
-        </div>
     </div>
 
   );

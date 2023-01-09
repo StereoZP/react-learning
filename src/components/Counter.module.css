@@ -1,4 +1,11 @@
-.myBtn{
+.myCounter{
+    margin-top: 20px;
+    border: 2px solid teal;
+    text-align: center;
+    justify-content: center;
+}
+.myCounterBtn{
+    margin: 5px;
     padding: 5px 15px;
     color: teal;
     font-size: 14px;
@@ -7,4 +14,3 @@
     cursor: pointer;
     width: 120px;
 }
-
