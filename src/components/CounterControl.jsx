@@ -1,19 +1,21 @@
 import React from 'react';
 import MyInput from "./UI/input/MyInput";
-import classes from "./Counter.module.css"
+import MyButton from "./UI/button/MyButton";
+import classesCounterBtn from "./UI/button/MyButton.module.css"
 
 
-const CounterControl = (props) => {
+const CounterControl = ({userValue, onClick, onChange, text}) => {
 
     return (
         <div>
             <span>Введите своё число:</span>
-            <MyInput value={props.userControl.value}
-                   onChange={event => props.userControl.setValue(event.target.value)}
+            <MyInput value={userValue}
+                     onChange={onChange}
             />
-            <button className={classes.myCounterBtn} onClick={props.userControl.onClick}>
-                    {props.userControl.text}
-            </button>
+            <MyButton className={classesCounterBtn.myCounterBtn}
+                      onClick={onClick}>
+                      {text}
+            </MyButton>
         </div>
     );
 };

@@ -7,4 +7,6 @@
     cursor: pointer;
     width: 120px;
 }
-
+.myCounterBtn{
+    margin: 5px;
+}
