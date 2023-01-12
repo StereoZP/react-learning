@@ -1,7 +1,7 @@
 import React from 'react';
-import MyInput from "./UI/input/MyInput";
-import MyButton from "./UI/button/MyButton";
-import classesCounterBtn from "./UI/button/MyButton.module.css"
+import MyInput from "../input/MyInput";
+import MyButton from "../button/MyButton";
+import classesCounterBtn from "../button/MyButton.module.css"
 
 
 const CounterControl = ({userValue, onClick, onChange, text}) => {

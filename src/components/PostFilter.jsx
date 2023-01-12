@@ -1,15 +1,10 @@
 import React from 'react';
-import MyInput from "./UI/input/MyInput";
 import MySelect from "./UI/select/MySelect";
+import st from './PostFilter.module.css'
 
-const PostFilter = ({filter, setFilter}) => {
+const PostFilter = ({filter, setFilter,children}) => {
     return (
-        <div>
-            <MyInput
-                value={filter.query}
-                onChange={e => setFilter({...filter, query: e.target.value})}
-                placeholder="Search..."
-            />
+        <div className={st.filter}>
             <MySelect
                 value={filter.sort}
                 onChange={selectedSort => setFilter({...filter, sort:selectedSort})}
@@ -19,6 +14,7 @@ const PostFilter = ({filter, setFilter}) => {
                     {value: 'body', name:'Description'},
                 ]}
             />
+            {children}
         </div>
     );
 };

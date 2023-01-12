@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import CounterControl from './CounterControl';
 import classes from "./Counter.module.css"
-import classesCounterBtn from "./UI/button/MyButton.module.css"
-import MyButton from "./UI/button/MyButton";
+import classesCounterBtn from "../button/MyButton.module.css"
+import MyButton from "../button/MyButton";
+import Display from "./Display";
 
 const Counter = () => {
     const [count, setCount] = useState(0)
@@ -23,7 +24,7 @@ const Counter = () => {
     }
     return (
         <div className={classes.myCounter}>
-            <h1>{count}</h1>
+            <Display value={count}/>
             <CounterControl
                 userValue={value}
                 onClick={userCount}

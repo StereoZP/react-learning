@@ -5,6 +5,8 @@ import PostForm from "./components/PostForm";
 import PostFilter from "./components/PostFilter";
 import MyModal from "./components/UI/MyModal/MyModal";
 import MyButton from "./components/UI/button/MyButton";
+import MySearch from "./components/UI/search/MySearch";
+
 
 function App() {
     const [posts, setPosts] = useState([
@@ -46,8 +48,11 @@ function App() {
             <hr style={{margin: '15px 0'}}/>
             <PostFilter
                 filter={filter}
-                setFilter={setFilter}
-            />
+                setFilter={setFilter}>
+                <MySearch
+                filter={filter}
+                setFilter={setFilter}/>
+            </PostFilter>
             <PostList remove={removePost} posts={sortedAndSearchedPosts} title="JS list"/>
         </div>
     );
